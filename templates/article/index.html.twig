@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %} {% block title %}Hello ArticleController!{%
+endblock %} {% block body %}
+<div class="grid grid-cols-3 gap-6 p-10">
+  {% for article in articles %}
+  <a href="/articleDetail">
+    <div class="h-24 bg-slate-400">
+        <div class="flex flex-row justify-around">
+            <p>{{ article.titre }}</p>
+            <img class="w-10 h-10" src={{ article.imageUrl }} alt="">
+        </div>
+        <p>Date: </p>
+    </div>
+  </a>
+
+  {% endfor %}
+</div>
+
+{% endblock %}

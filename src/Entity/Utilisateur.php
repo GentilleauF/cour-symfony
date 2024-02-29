@@ -25,6 +25,9 @@ class Utilisateur
     #[ORM\Column(length: 255)]
     private ?string $password = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $urlImage = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +71,18 @@ class Utilisateur
 
     public function setPassword(string $password): static{
         $this->password = $password;
+        return $this;
+    }
+
+    public function getUrlImage(): ?string
+    {
+        return $this->urlImage;
+    }
+
+    public function setUrlImage(?string $urlImage): static
+    {
+        $this->urlImage = $urlImage;
+
         return $this;
     }
 }
