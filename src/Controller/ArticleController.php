@@ -19,9 +19,12 @@ class ArticleController extends AbstractController
         ]);
     }
 
-    #[Route('/articleDetail', name: 'app_articleDetail')]
-    public function articleById(): Response {
-        return $this->render('article/articleDetail.html.twig');
+    #[Route('/articleDetail/{id}', name: 'app_articleDetail')]
+    public function articleById($id, ArticleRepository $repository): Response {
+        $articleById = $repository->findOneBy(['id' => $id]);
+        return $this->render('article/articleDetail.html.twig', [
+            'article' => $articleById
+        ]);
     }
 
 

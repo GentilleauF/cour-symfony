@@ -1,0 +1,9 @@
+<a href="/articleDetail/{{article.id}}">
+    <div class="h-32 p-5 bg-slate-400">
+        <div class="flex flex-row justify-between items-center">
+            <p>{{ article.titre }}</p>
+            <img class="w-12 h-12" src={{ article.imageUrl }} alt="">
+        </div>
+        <p>Date: {{article.dateCreation | date("d/m/Y")}} </p>
+    </div>
+  </a>

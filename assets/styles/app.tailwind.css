@@ -716,6 +716,10 @@ video {
   height: 6rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -730,6 +734,10 @@ video {
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .max-w-\[85rem\] {
@@ -917,6 +925,10 @@ video {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-2 {
