@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -mx-4 -my-8 gap-4">
+        {# exemple parcourir la liste des articles #}
+        {% for article in articles %}
+            {% include "composants/_card_article.html.twig" %}
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
